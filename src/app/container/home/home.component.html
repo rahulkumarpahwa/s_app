@@ -1,0 +1,23 @@
+<div class="flex flex-col items-center justify-center p-16 m-16">
+  <div
+    class="flex items-center justify-between gap-5 shadow shadow-black px-10 py-4 rounded"
+  >
+    <button
+      class="border px-4 py-1 text-xl rounded"
+      (click)="onLoginClick()"
+      [ngStyle]="{
+        backgroundColor: isLogin ? 'black' : 'white',
+        color: isLogin ? 'white' : 'black'
+      }"
+    >
+      Login</button
+    ><button class="border px-4 rounded py-1 text-xl" (click)="onSignupClick()" [ngStyle]="{
+        backgroundColor: !isLogin ? 'black' : 'white',
+        color: !isLogin ? 'white' : 'black'
+      }">Signup</button>
+  </div>
+  <!-- <h1 class="font-bold text-2xl">{{ isLogin ? "Login" : "Signup" }}</h1> -->
+  <app-login [hidden]="!isLogin"></app-login>
+  <app-signup [hidden]="isLogin"></app-signup>
+  <app-show></app-show>
+</div>

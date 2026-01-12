@@ -5,38 +5,40 @@
     type="text"
     placeholder="Enter First Name"
     class="border border-black rounded text-center w-full"
+    [value] ="user.firstname"
   />
   <input
     type="text"
     placeholder="Enter Last Name"
     class="border border-black rounded text-center w-full"
+    [value] ="user.lastName" 
+
   />
   <input
     type="email"
     placeholder="Enter Email"
     class="border border-black rounded text-center w-full"
+    [(ngModel)] = "user.email"
   />
   <input
     type="password"
     placeholder="Enter Password"
     class="border border-black rounded text-center w-full"
+    [value] = "user.password"
   />
   <div class="flex items-center justify-between gap-3 text-center">
     <input
-      type="number"
-      placeholder="+91"
-      class="border border-black rounded text-center w-11"
-    />
-    <input
-      type="number"
+      type="text"
       placeholder="Enter Mobile"
       class="border border-black rounded text-center"
+      [value] = "user.mobile"
     />
   </div>
   <input
     type="number"
     placeholder="Enter Pin ( X-X-X-X-X-X )"
     class="border border-black rounded text-center w-full"
+    [value] = "user.pin"
   />
   <button type="submit" class="w-full bg-black text-white rounded py-2">Signup</button>
 </div>

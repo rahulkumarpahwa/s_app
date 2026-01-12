@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   isLogin = true;
+  user: {
+    firstname?: string, //? -> shows optional
+    lastName?: string,
+    email: string,
+    password: string,
+    mobile?: string,
+    pin?: number,
+  } = { firstname: "", lastName: "", email: "", password: "", mobile: "", pin: 0 };
 
   onLoginClick() {
     this.isLogin = true;

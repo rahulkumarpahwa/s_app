@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import axios from 'axios';
+import { BehaviorSubject } from 'rxjs';
+import { User } from '../models/user.model';
 
 @Injectable({
     providedIn: 'root'
 })
 export class LoginService {
+    user$ = new BehaviorSubject<any>(null);
     //   private readonly STORAGE_KEY = 'notes';
     //   private notes: Note[] = [];
 
@@ -49,6 +52,7 @@ export class LoginService {
             // console.log(password);
             const response = await axios.post(environment.apiUrl + "/login", { email: email, password: password }, { withCredentials: true, });
             console.log(response);
+            this.user$.next(response);
         } catch (error) {
             console.log(error)
         }

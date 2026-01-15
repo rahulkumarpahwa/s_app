@@ -9,6 +9,8 @@ import { ShowComponent } from './container/components/show/show.component';
 import { HomeComponent } from './container/home/home.component';
 import { SignupComponent } from './container/components/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './container/dashboard/dashboard.component';
+import { ProfileComponent } from './container/components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     ShowComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule, FormsModule

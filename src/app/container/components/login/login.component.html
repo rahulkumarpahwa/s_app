@@ -3,11 +3,14 @@
     type="email"
     placeholder="Enter Email"
     class="border border-black rounded text-center w-full"
+    [value] ="user.email"
+    (input) = "onInputEmail($event)"
   />
   <input
     type="password"
     placeholder="Enter Password"
     class="border border-black rounded text-center w-full"
+    [(ngModel)] = "user.password"
   />
-  <button type="submit" class="w-full bg-black text-white">Login</button>
+  <button type="submit" class="w-full bg-black text-white" (click)="onLogin()">Login</button>
 </div>

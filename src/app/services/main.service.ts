@@ -7,7 +7,7 @@ import { User } from '../models/user.model';
 @Injectable({
     providedIn: 'root'
 })
-export class LoginService {
+export class MainService {
     user$ = new BehaviorSubject<any>(null);
     //   private readonly STORAGE_KEY = 'notes';
     //   private notes: Note[] = [];

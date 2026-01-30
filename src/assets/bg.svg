@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern
+      id="dollarPattern"
+      width="100"
+      height="100"
+      patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-45)"
+    >
+      <text
+        x="10"
+        y="70"
+        font-size="64"
+        font-family="Arial, Helvetica, sans-serif"
+        fill="#016630"
+      >
+        $
+      </text>
+    </pattern>
+  </defs>
+
+  <!-- Transparent background (no rect needed) -->
+  <rect width="100%" height="100%" fill="url(#dollarPattern)" />
+</svg>

@@ -1,22 +1,21 @@
 import { Component } from '@angular/core';
-import { LoginService } from 'src/app/services/login.service';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
   user: {
     email: string,
     password: string,
   } = { email: "", password: "" };
-  constructor(private loginService: LoginService) {
+  constructor(private mainService: MainService) {
   }
   onInputEmail(event: any) {
     this.user.email = event.target.value;
   }
   onLogin() {
-    this.loginService.onLogin(this.user.email, this.user.password);
+    this.mainService.onLogin(this.user.email, this.user.password);
   }
 }
